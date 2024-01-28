@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="600" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="388f12b5-4e6b-40d7-a572-d6596460c600">
+	<property name="ireport.zoom" value="1.2396694214876032"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="191"/>
+	<parameter name="cin" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+CURDATE() AS Dat ,
+     stage.`date_debut` AS stage_date_debut,
+     stage.`date_fin` AS stage_date_fin,
+     stage.`duree` AS stage_duree,
+stagiaire.`nom` AS stagiaire_nom,
+stagiaire.`etablissement` AS stagiaire_etablissement,
+stagiaire.`cne` AS stagiaire_cne
+FROM 
+     `stage` stage  , `stagiaire` stagiaire WHERE  stage.`cne` =  stagiaire.`cne` and  stage.`id` =$P{id}   and  stage.`cne` =$P{cin}]]>
+	</queryString>
+	<field name="Dat" class="java.sql.Date"/>
+	<field name="stage_date_debut" class="java.sql.Date"/>
+	<field name="stage_date_fin" class="java.sql.Date"/>
+	<field name="stage_duree" class="java.lang.Integer"/>
+	<field name="stagiaire_nom" class="java.lang.String"/>
+	<field name="stagiaire_etablissement" class="java.lang.String"/>
+	<field name="stagiaire_cne" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="286" y="-197" width="100" height="20" uuid="c48aa8de-d037-4fe0-9d92-1972aabd3a9e"/>
+				<text><![CDATA[Static text]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="207" y="21" width="283" height="32" uuid="c1f6308b-a244-40fa-9999-3d3089d60677"/>
+				<textElement>
+					<font fontName="Arial Black" size="22" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Attestation de Stage]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="-14" width="267" height="93" uuid="63d3ca03-72df-46fd-a7c4-77b5c9ef307a"/>
+				<imageExpression><![CDATA["C:\\Users\\HP\\OneDrive\\Bureau\\webagency\\R.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="16" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="348" splitType="Stretch">
+			<staticText>
+				<reportElement x="21" y="16" width="110" height="20" uuid="c7da826a-2f60-4a5e-a85d-8ba706863129"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Il a ete conclu le ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="16" width="213" height="20" uuid="56866a11-1072-4d2a-82bd-c7777935c777"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[,une convention de stage entre :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="54" width="655" height="20" uuid="d94d9781-394b-4544-be79-2bd7b248caa7"/>
+				<textElement>
+					<font fontName="Arial" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NYSUS SOLUTIONS 1 ère étage N° 01،Rue El khayat, Casablanca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="90" width="22" height="20" uuid="e464f9d8-aafa-4102-9352-3cc731f61371"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Et]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="90" width="250" height="20" uuid="10295d03-138e-4c3f-9473-f6ad74dd9da5"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="false"/>
+				</textElement>
+				<text><![CDATA[,titulaire de numero d'identification national :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="133" width="251" height="20" uuid="e94c0fb8-a062-460d-9eec-6219d1b360c1"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[Etudiant au sein de l'etablissement  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="171" width="141" height="20" uuid="fb0d88a9-2bcf-4f61-9aa7-9cf582421a65"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NYSUS SOLUTIONS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="162" y="171" width="117" height="20" uuid="432e2def-6f88-4879-8d10-4c31433034d5"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[ attestat que ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="214" width="203" height="20" uuid="f69a2d27-1dc0-487f-a2b6-4b6a1d4661df"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[effectuer un stage dans duree ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="258" y="214" width="81" height="20" uuid="c4747847-f7fd-4cfa-a8c1-81eb280271ca"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[jour , du]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="214" width="31" height="20" uuid="9b0da04d-2c63-41ec-b8b1-bf1b5478d4fa"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[,au]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="255" width="265" height="20" uuid="f4cc6c19-234d-4186-ba1d-00206949550e"/>
+				<textElement>
+					<font fontName="Calibri" size="16"/>
+				</textElement>
+				<text><![CDATA[Fait le                     à Casablanca]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="131" y="16" width="69" height="20" uuid="83aa7696-03ed-47d3-9c42-35fe640a6420"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stage_date_debut}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="214" width="59" height="20" uuid="6e9f61dd-4f0f-45f0-9908-ec6c3232c045"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stage_date_debut}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="431" y="214" width="64" height="20" uuid="15632c0f-0c12-404b-89eb-34b92ffc32ca"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stage_date_fin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="224" y="214" width="34" height="20" uuid="26d4427a-2845-4e78-bc1a-bcb4271f57be"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stage_duree}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="43" y="90" width="107" height="20" uuid="1e687eff-d797-4fd1-b916-3b7441d5f640"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stagiaire_nom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="90" width="48" height="20" uuid="e952ab39-8350-4d3a-be16-45febc9ffc54"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stagiaire_cne}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="272" y="133" width="67" height="20" uuid="a2625a84-99e5-477b-a95b-60304dcb2f50"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stagiaire_etablissement}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="69" y="255" width="62" height="20" uuid="1361461f-3c68-44ed-a350-119ff7450f41"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Dat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="382" y="322" width="137" height="20" uuid="235f83ce-7571-40d7-aa2d-9f8df16ade7f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cachet de l'entreprise]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="272" y="171" width="128" height="20" uuid="86f28166-1e1c-4e9e-b6c0-c4aa88f6a70f"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{stagiaire_nom}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="400" y="15" width="100" height="20" uuid="4203f71b-89a0-464c-89ee-3297829d9aa8"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature ]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>
