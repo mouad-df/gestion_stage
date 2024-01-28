@@ -10,7 +10,7 @@ import javax.swing.border.Border;
 import Admin.BD_admin;
 import Admin.admin;
 import Admin.message_supprimer;
-import Admin.mise_à_jour;
+import Admin.mise_ï¿½_jour;
 import Admin.modifier_admin;
 import Stagiaire.BD_stagiaire;
 import historique.BD_historique;
@@ -403,8 +403,8 @@ public class gestion_admin extends javax.swing.JPanel {
     private void miseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miseActionPerformed
 
         try {
-            new Admin.mise_à_jour().show();
-            bd.getcurrentuser(Authentification.usercurrent,Admin.mise_à_jour.nom,Admin.mise_à_jour.email, Admin.mise_à_jour.tel,Admin.mise_à_jour.password);
+            new Admin.mise_Ã _jour().show();
+            bd.getcurrentuser(Authentification.usercurrent,Admin.mise_Ã _jour.nom,Admin.mise_Ã _jour.email, Admin.mise_Ã _jour.tel,Admin.mise_Ã _jour.password);
         } catch (SQLException ex) {
             ex.printStackTrace();
         } catch (Exception ex) { 

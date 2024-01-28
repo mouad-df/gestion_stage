@@ -35,9 +35,9 @@ public class Form_Dashboard extends javax.swing.JPanel implements Runnable {
         initComponents();
         init();
         Calendar cal = new GregorianCalendar();
-        Bd = new BD_Stage("localhost", 3306, "Gestion_Stages", "root", "");
-        bd = new BD_historique("localhost", 3306, "Gestion_Stages", "root", "");
-        BD = new BD_admin("localhost", 3306, "Gestion_Stages", "root", "");
+        Bd = new BD_Stage("localhost", 3306, "gestion_stages", "root", "");
+        bd = new BD_historique("localhost", 3306, "gestion_stages", "root", "");
+        BD = new BD_admin("localhost", 3306, "gestion_stages", "root", "");
         currentuser = BD.getcurrentAdmin(Authentification.usercurrent);
         stagiaire.setText(String.valueOf(Bd.countstagiaire()));
         admins.setText(String.valueOf(Bd.countadmin()));

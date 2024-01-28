@@ -2,7 +2,7 @@ package Stage;
 
 import Abscence.abscence;
 
-import com.mysql.jdbc.Connection;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -21,7 +21,7 @@ public class BD_Stage {
 
     public BD_Stage(String machine, int port, String bd, String utilisateur, String mdp)
             throws Exception {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         // jdbc:mysql://machine:port/bd?serverTimezone=UTC
         cnx = (Connection) DriverManager.getConnection("jdbc:mysql://" + machine + ":" + port + "/" + bd + "?serverTimezone=UTC",
                 utilisateur, mdp);

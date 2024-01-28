@@ -1,16 +1,16 @@
 
-package pièce;
+package piÃ¨ce;
 
 import java.io.FileInputStream;
 
-public class pièce {
+public class piÃ¨ce {
     private static int num=0;
     private int  id;
     private String piece;
     private String type;
     private String chemin;
 
-    public pièce(String piece, String type, String chemin) {
+    public piÃ¨ce(String piece, String type, String chemin) {
         this.piece = piece;
         this.type = type;
         this.chemin = chemin;
@@ -50,7 +50,7 @@ public class pièce {
 
     @Override
     public String toString() {
-        return "pièce{" + "id=" + id + ", piece=" + piece + ", type=" + type + ", chemin=" + chemin + '}';
+        return "piï¿½ce{" + "id=" + id + ", piece=" + piece + ", type=" + type + ", chemin=" + chemin + '}';
     }
     
     

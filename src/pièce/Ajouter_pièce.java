@@ -1,5 +1,5 @@
 
-package piËce;
+package pi√®ce;
 
 import Admin.BD_admin;
 
@@ -28,22 +28,22 @@ import org.apache.pdfbox.rendering.ImageType;
 import org.apache.pdfbox.rendering.PDFRenderer;
 import org.apache.pdfbox.util.ImageIOUtil;
 import javax.swing.border.EmptyBorder;
-public class Ajouter_piËce extends javax.swing.JFrame {
+public class Ajouter_pi√®ce extends javax.swing.JFrame {
 
-    BD_piËce bd;
+    BD_pi√®ce bd;
     String currentuser = null;
     BD_admin Bd;
     BD_historique BD;
     DefaultTableModel model;
     int indexrow;
 String path;
-    public Ajouter_piËce() throws Exception {
+    public Ajouter_pi√®ce() throws Exception {
         initComponents();
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
         setLocation(size.width / 2 - getWidth() / 2, size.height / 2 - getHeight() / 2);
-        setDefaultCloseOperation(Ajouter_piËce.DISPOSE_ON_CLOSE);
-        bd = new BD_piËce("localhost", 3306, "Gestion_Stages", "root", "");
+        setDefaultCloseOperation(Ajouter_pi√®ce.DISPOSE_ON_CLOSE);
+        bd = new BD_pi√®ce("localhost", 3306, "Gestion_Stages", "root", "");
         Bd = new BD_admin("localhost", 3306, "Gestion_Stages", "root", "");
         BD = new BD_historique("localhost", 3306, "Gestion_Stages", "root", "");
         bd.rechercher(gestion_stage.idselected, table1);
@@ -331,9 +331,9 @@ String path;
             }else{
                 String   image_chemin=chemin1.getText();
                 table1.addRow(new Object[]{piece.getText(), type1.getText(),image_chemin});
-               image_chemin = image_chemin.replace("\\","/");
-               piËce piËce = new piËce(piece.getText(), type1.getText(),image_chemin);
-                bd.insertpiece(gestion_stage.idselected, piËce);
+                image_chemin = image_chemin.replace("\\","/");
+                pi√®ce pi√®ce = new pi√®ce(piece.getText(), type1.getText(),image_chemin);
+                bd.insertpiece(gestion_stage.idselected, pi√®ce);
                 historique histo = new historique("Ajouter Pi√®ce", date);
                 currentuser = Bd.getcurrentAdmin(Authentification.usercurrent);
                 BD.inserthistorique(histo.getId(), currentuser.split("_")[0], histo);
@@ -342,7 +342,7 @@ String path;
                 chemin1.setText("Chemin");
             }
         }catch (SQLException ex){
-            Logger.getLogger(Ajouter_piËce.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_AjouterActionPerformed
 
@@ -365,7 +365,7 @@ String path;
                 type1.setText("Type Pi√®ce");
                 chemin1.setText("Chemin");
             } catch (SQLException ex) {
-                Logger.getLogger(Ajouter_piËce.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }//GEN-LAST:event_supprimerActionPerformed
@@ -522,13 +522,13 @@ String path;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Ajouter_piËce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Ajouter_piËce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Ajouter_piËce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Ajouter_piËce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Ajouter_pi√®ce.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

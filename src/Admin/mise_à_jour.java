@@ -20,13 +20,13 @@ import javax.swing.JOptionPane;
 
 import com.k33ptoo.components.KButton;
 
-public class mise_à_jour extends javax.swing.JFrame {
+public class mise_Ã _jour extends javax.swing.JFrame {
 BD_stagiaire bd;
     BD_admin Bd;
     BD_historique BD;
 
     String currentuser;
-    public mise_à_jour() throws Exception {
+    public mise_Ã _jour() throws Exception {
         initComponents();
           Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
@@ -43,7 +43,7 @@ BD_stagiaire bd;
 
         jPanel1 = new javax.swing.JPanel();
         fermer = new com.k33ptoo.components.KButton();
-        KButton mise_à_jour = new com.k33ptoo.components.KButton();
+        KButton mise_ï¿½_jour = new com.k33ptoo.components.KButton();
         nom = new javaswingdev.swing.rounde();
         tel = new javaswingdev.swing.rounde();
         password = new javaswingdev.swing.rounde();
@@ -78,25 +78,25 @@ BD_stagiaire bd;
         });
 
         mise_à_jour.setForeground(new java.awt.Color(0, 0, 0));
-        mise_à_jour.setText("Mise Ã  jour");
-        mise_à_jour.setBorderPainted(false);
-        mise_à_jour.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        mise_à_jour.setkAllowTab(true);
-        mise_à_jour.setkBackGroundColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkBorderRadius(50);
-        mise_à_jour.setkEndColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkForeGround(new java.awt.Color(0, 0, 0));
-        mise_à_jour.setkHoverColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkHoverEndColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkHoverForeGround(new java.awt.Color(255, 255, 255));
-        mise_à_jour.setkHoverStartColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkIndicatorColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkPressedColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkSelectedColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.setkStartColor(new java.awt.Color(143, 148, 251));
-        mise_à_jour.addActionListener(new java.awt.event.ActionListener() {
+        mise_Ã _jour.setText("Mise Ã  jour");
+        mise_Ã _jour.setBorderPainted(false);
+        mise_Ã _jour.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        mise_Ã _jour.setkAllowTab(true);
+        mise_Ã _jour.setkBackGroundColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkBorderRadius(50);
+        mise_Ã _jour.setkEndColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkForeGround(new java.awt.Color(0, 0, 0));
+        mise_Ã _jour.setkHoverColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkHoverEndColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkHoverForeGround(new java.awt.Color(255, 255, 255));
+        mise_Ã _jour.setkHoverStartColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkIndicatorColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkPressedColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkSelectedColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.setkStartColor(new java.awt.Color(143, 148, 251));
+        mise_Ã _jour.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-            	mise_à_jourActionPerformed(evt);
+            	mise_Ã _jourjourActionPerformed(evt);
             }
         });
 
@@ -153,7 +153,7 @@ BD_stagiaire bd;
                             .addComponent(nom, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(34, 34, 34)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mise_à_jour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(mise_Ã _jour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(password, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 208, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(104, Short.MAX_VALUE))
@@ -172,7 +172,7 @@ BD_stagiaire bd;
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 75, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(fermer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(mise_à_jour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(mise_ï¿½_jour, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45))
         );
 
@@ -243,7 +243,7 @@ BD_stagiaire bd;
         this.hide();
     }//GEN-LAST:event_fermerActionPerformed
 
-    private void mise_à_jourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mise_Ã _jourActionPerformed
+    private void mise_Ã _jourjourActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mise_Ã _jourActionPerformed
                 DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
 
@@ -292,7 +292,7 @@ if (email.getText().equals("Email")) {
     }//GEN-LAST:event_email1FocusGained
 
     private void emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_emailFocusLost
-       if (email.getText().equals("")) {
+        if (email.getText().equals("")) {
             email.setText("Email");
         }
     }//GEN-LAST:event_emailFocusLost
@@ -314,13 +314,13 @@ if (email.getText().equals("Email")) {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(mise_à_jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mise_Ã _jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(mise_à_jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mise_Ã _jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(mise_à_jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mise_Ã _jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(mise_à_jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(mise_Ã _jour.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
@@ -336,7 +336,7 @@ if (email.getText().equals("Email")) {
     public static javaswingdev.swing.rounde email;
     private com.k33ptoo.components.KButton fermer;
     private javax.swing.JPanel jPanel1;
-    private com.k33ptoo.components.KButton mise_à_jour;
+    private com.k33ptoo.components.KButton mise_ï¿½_jour;
     public static javaswingdev.swing.rounde nom;
     public static javaswingdev.swing.rounde password;
     public static javaswingdev.swing.rounde tel;

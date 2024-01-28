@@ -1,9 +1,9 @@
-package pièce;
+package piÃ¨ce;
 
-import com.mysql.jdbc.Connection;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,14 +14,14 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javaswingdev.swing.table.Table;
 
-public class BD_pièce {
+public class BD_piÃ¨ce<piÃ¨ce> {
 
     Connection cnx;
 
-    public BD_pièce(String machine, int port, String bd, String utilisateur, String mdp)
+    public BD_piÃ¨ce(String machine, int port, String bd, String utilisateur, String mdp)
             throws Exception {
 
-        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
         // jdbc:mysql://machine:port/bd?serverTimezone=UTC
         cnx = (Connection) DriverManager.getConnection("jdbc:mysql://" + machine + ":" + port + "/" + bd + "?serverTimezone=UTC",
                 utilisateur, mdp);
@@ -31,7 +31,7 @@ public class BD_pièce {
         return cnx;
     }
 
-    public void insertpiece(String id_Stage, pièce piece) throws SQLException {
+    public void insertpiece(String id_Stage, piÃ¨ce piece) throws SQLException {
         int count = 0;
         Statement state = cnx.createStatement();
         state.executeUpdate("INSERT INTO  `piece`  (`id`,`piece`,`type`,`chemin`) values ('" + id_Stage+ "','" + piece.getPiece() + "','" + piece.getType() + "','" + piece.getChemin() + "')");
@@ -63,7 +63,7 @@ public class BD_pièce {
             int result = state.executeUpdate(query);
             state.close();
         } catch (SQLException ex) {
-            Logger.getLogger(BD_pièce.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(BD_piÃ¨ce.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

@@ -28,7 +28,7 @@ public static String usercurrent=null;
 
     public Authentification() throws Exception {
         initComponents();
-        bd = new BD_admin("localhost", 3306, "Gestion_Stages", "root", "");
+        bd = new BD_admin("localhost", 3306, "gestion_stages", "root", "");
         modification();
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();

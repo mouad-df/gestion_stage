@@ -48,8 +48,7 @@ import net.sf.jasperreports.engine.util.JRLoader;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
 import net.sf.jasperreports.swing.JRViewer;
 import net.sf.jasperreports.view.JasperViewer;
-import pièce.Ajouter_pièce;
-import pièce.Ajouter_pièce;
+import piÃ¨ce.Ajouter_piÃ¨ce;
 
 public class gestion_stage extends javax.swing.JPanel {
 
@@ -518,7 +517,7 @@ public class gestion_stage extends javax.swing.JPanel {
             try {
                 //cinselected = model.getValueAt(indexrow, 0).toString();
                 idselected = model.getValueAt(indexrow, 0).toString();
-                new Ajouter_pièce().show();
+                new Ajouter_piï¿½ce().show();
             } catch (Exception ex) {
                 Logger.getLogger(gestion_stage.class.getName()).log(Level.SEVERE, null, ex);
             }

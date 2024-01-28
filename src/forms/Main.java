@@ -62,13 +62,9 @@ public class Main extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        try {
-            body = (javax.swing.JPanel) java.beans.Beans.instantiate(getClass().getClassLoader(), "forms.Main_body");
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
+     // Remove the try-catch block that contains java.beans.Beans.instantiate
+        body = new javax.swing.JPanel();
+
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
